@@ -26,9 +26,12 @@ requirements:
     - python >=2.7
 
 test:
-  imports:
-    - cursor
+  requires:
+    - pip
   commands:
+    # check requirements
+    - python -m pip check
+    # check entry points
     - cursor_hide
     - cursor_show
 
